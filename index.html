@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="ja">
+
+<head prefix="og: http://ogp.me/ns# fb: http://www.facebook.com/2008/fbml">
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=375, minimum-scale=1, user-scalable=no">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <title>niconicocoa 発表スライド上にニコニコ風コメントが流せるサービス</title>
+  <meta name="description" content="マイナンバーが素数かどうか安心してチェックできるサイト〜安心して下さい。保存してないですよ。〜">
+  <meta name="keywords" content="素数,とにかく明るい安村,マイナンバー">
+  <meta property="og:title" content="マイナンバーが素数かどうか安心してチェックできるサイト">
+  <meta property="og:type" content="website">
+  <meta property="og:url" content="http://nabettu.github.io/niconicocoa/">
+  <meta property="og:image" content="http://nabettu.github.io/niconicocoa/ogp2.png">
+  <meta property="og:site_name" content="マイナンバーが素数かどうか安心してチェックできるサイト">
+  <meta property="og:description" content="安心して下さい。保存してないですよ。">
+  <meta property="fb:app_id" content="850799675019013">
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="マイナンバーが素数かどうか安心してチェックできるサイト">
+  <meta name="twitter:description" content="安心して下さい。保存してないですよ。">
+  <meta name="twitter:image" content="http://nabettu.github.io/niconicocoa/ogp2.png">
+  <meta name="twitter:site" content="http://nabettu.github.io/niconicocoa/">
+  <link rel="shortcut icon" href="./favicon.ico">
+  <link href="css/bootstrap.min.css" rel="stylesheet">
+  <!--link href="css/style.css" rel="stylesheet" type="text/css" media="all"-->
+  <script src="js/jquery.min.js"></script>
+  <script src="js/bootstrap.min.js"></script>
+  <script src="http://cdn.mlkcca.com/v2.0.0/milkcocoa.js"></script>
+</head>
+
+<body>
+  <h1>niconicocoa</h1>
+  <p>発表スライド上にニコニコ風コメントが流せるサービス</p>
+
+  <input type="text" id="js-inputText" placeholder="ワロタｗｗｗ" />
+  <button class="btn btn-default" id="js-submitBtn">送信</button>
+
+  <div class="shareArea">
+    <p>このサービスをシェア</p>
+    <div class="fb-like" data-href="http://nabettu.github.io/niconicocoa/" data-layout="button_count" data-action="like" data-show-faces="false" data-share="false"></div>
+    <a href="https://twitter.com/share" class="twitter-share-button" data-text="〜安心して下さい。保存してないですよ。〜マイナンバーが素数かどうか安心してチェックできるサイト #安心して下さい #マイナンバー" data-count="none">Tweet</a>
+  </div>
+
+  <p>製作：<a href="//twitter.com/nabettu" target="_blank">わたなべ</a></p>
+
+  <script src="js/script.js" type="text/javascript"></script>
+
+  <script>
+    ! function(d, s, id) {
+      var js, fjs = d.getElementsByTagName(s)[0],
+        p = /^http:/.test(d.location) ? 'http' : 'https';
+      if (!d.getElementById(id)) {
+        js = d.createElement(s);
+        js.id = id;
+        js.src = p + '://platform.twitter.com/widgets.js';
+        fjs.parentNode.insertBefore(js, fjs);
+      }
+    }(document, 'script', 'twitter-wjs');
+    (function(d, s, id) {
+      var js, fjs = d.getElementsByTagName(s)[0];
+      if (d.getElementById(id)) return;
+      js = d.createElement(s);
+      js.id = id;
+      js.src = "//connect.facebook.net/ja_JP/sdk.js#xfbml=1&version=v2.4&appId=850799675019013";
+      fjs.parentNode.insertBefore(js, fjs);
+    }(document, 'script', 'facebook-jssdk'));
+  </script>
+</body>
+
+</html>
