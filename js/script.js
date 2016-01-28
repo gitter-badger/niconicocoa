@@ -5,7 +5,7 @@ $("#js-submitBtn").on("click", function() {
   var sendtext = $("#js-inputText").val();
   console.log("send" + sendtext);
 
-  ds.push({
+  ds.send({
     content: sendtext
   });
 })
