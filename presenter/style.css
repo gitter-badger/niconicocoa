@@ -15,16 +15,19 @@
   position: absolute;
   bottom: 0;
   left: 0;
+  margin: 0;
+  font-size: 15px;
 }
-#niconicocoa .message {
+#niconicocoa .comment {
   position: absolute;
   left: 100%;
+  margin: 0;
   text-align: left;
   animation-name: textanime;
-  animation-duration: 5s;
+  animation-duration: 10s;
   animation-iteration-count: 1;
   animation-fill-mode: forwards;
-  animation-timing-function: ease-in-out;
+  animation-timing-function: linear;
 }
 @-webkit-keyframes textanime {
   0% {

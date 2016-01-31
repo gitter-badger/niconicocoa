@@ -1,38 +1,37 @@
-var wrapper = $("<div></div>",{
-  "id":"niconicocoa"
-}).css({
-  position:"fixed",
-  top: 0,
-  height: "100%",
-  left: 0,
-  width: "100%",
-  zIndex: 99999999999999999,
-  pointerEvents: "none",
-  color: "#fff",
-  textShadow:"1px 2px 0 #000,1px -2px 0 #000,-1px 2px 0 #000,-1px -2px 0 #000,2px 1px 0 #000,2px -1px 0 #000,-2px 1px 0 #000,-2px -1px 0 #000,1px 1px 0 #000,1px -1px 0 #000,-1px 1px 0 #000,-1px -1px 0 #000"
+var wrapperDom = $("<div></div>", {
+  "id": "niconicocoa"
+});
+var setupedTextDom = $("<p></p>", {
+  addClass: 'status'
+}).text("niconicocoa is ready");
+
+$("body").append(wrapperDom);
+wrapper.append(setupedTextDom);
+
+$("#punch-start-presentation-left").on("click", function() {
+  setTimeout(function() {
+    console.log("reset");
+    wrapper.remove();
+    $("body").append(wrapper);
+    wrapper.append(setupedText);
+  }, 1500);
 });
 
-
-$("body").on("click",function(){
-  wrapperSetup();
-})
-
-(function wrapperSetup(){
-  $("body").remove(wrapper);
-  $("body").append(wrapper);
-})
-
-(function setup(){
-
 var milkcocoa = new MilkCocoa('yieldijxl4pvn.mlkcca.com');
-var ds = milkcocoa.dataStore('messages');
-ds.on("send",function(sentData){
-  console.log(sentData);
-  var text = $("<p>" + sentData.value.content + "</p>",{
-    "class":"comment"
-  }).css({
-    position:"absolute",
-    top: "50%"
-  });
-  $("#niconicocoa").append(text);
+var milkcocoaDS = milkcocoa.dataStore('messages');
+var num = 0;
+milkcocoaDS.on("send", function(sentData) {
+  var commentDom = $("<p></p>", {
+    addClass: "comment",
+    "id": num
+  }).text(sentData.value.content);
+  $("#niconicocoa").append(commentDom);
+  setTimeout(function(id) {
+    $("#niconicocoa #" + id).remove();
+  }, 10000, num);
+  num++;
+});
+
+milkcocoaDS.send({
+  content: "niconicocoa setup done!"
 });
