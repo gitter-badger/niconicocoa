@@ -5,9 +5,11 @@ $("#js_submitBtn").on("click", function() {
   var sendtext = $("#js_inputText").val();
   console.log(sendtext);
 
-  ds.send({
-    content: sendtext
-  },function(){
-    location.reload();
-  });
+  if (!sendtext == "") {
+    ds.push({
+      content: sendtext
+    }, function() {
+      location.reload();
+    });
+  }
 })

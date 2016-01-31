@@ -1,1 +1,8 @@
-javascript:void%20function(){document.body.appendChild(document.createElement(%22script%22)).src=%22//ajax.googleapis.com/ajax/libs/jquery/2.2.0/jquery.min.js%22,document.body.appendChild(document.createElement(%22script%22)).src=%22//cdn.mlkcca.com/v2.0.0/milkcocoa.js%22;var%20e=document.createElement(%22link%22);e.href=%22//nabettu.github.io/niconicocoa/presenter/style.css%22,e.type=%22text/css%22,e.rel=%22stylesheet%22,document.body.appendChild(e),document.body.appendChild(document.createElement(%22script%22)).src=%22//nabettu.github.io/niconicocoa/presenter/script.js%22}();
+document.body.appendChild(document.createElement("script")).src="//ajax.googleapis.com/ajax/libs/jquery/2.2.0/jquery.min.js";
+document.body.appendChild(document.createElement("script")).src="//cdn.mlkcca.com/v2.0.0/milkcocoa.js";
+var cssfile=document.createElement("link");
+cssfile.href="//nabettu.github.io/niconicocoa/presenter/style.css";
+cssfile.type="text/css";
+cssfile.rel="stylesheet";
+document.body.appendChild(cssfile);
+document.body.appendChild(document.createElement("script")).src="//nabettu.github.io/niconicocoa/presenter/script.js";
