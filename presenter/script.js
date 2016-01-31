@@ -23,7 +23,9 @@ milkcocoaDS.on("send", function(sentData) {
   var commentDom = $("<p></p>", {
     addClass: "comment",
     "id": num
-  }).text(sentData.value.content);
+  }).text(sentData.value.content).css({
+    top: (Math.random() * 90) + "%"
+  });
   $("#niconicocoa").append(commentDom);
   setTimeout(function(id) {
     $("#niconicocoa #" + id).remove();
