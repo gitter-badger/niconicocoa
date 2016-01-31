@@ -13,7 +13,6 @@ $("#punch-start-presentation-left").on("click", function() {
     console.log("reset");
     wrapperDom.remove();
     $("body").append(wrapperDom);
-    wrapperDom.append(setupedText);
   }, 1500);
 });
 
