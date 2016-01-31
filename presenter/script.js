@@ -6,14 +6,14 @@ var setupedTextDom = $("<p></p>", {
 }).text("niconicocoa is ready");
 
 $("body").append(wrapperDom);
-wrapper.append(setupedTextDom);
+wrapperDom.append(setupedTextDom);
 
 $("#punch-start-presentation-left").on("click", function() {
   setTimeout(function() {
     console.log("reset");
-    wrapper.remove();
-    $("body").append(wrapper);
-    wrapper.append(setupedText);
+    wrapperDom.remove();
+    $("body").append(wrapperDom);
+    wrapperDom.append(setupedText);
   }, 1500);
 });
 
